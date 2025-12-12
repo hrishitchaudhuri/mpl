@@ -72,6 +72,11 @@ Real32 ArrayR32_cas(Real32* a, Word64 i, Real32 x, Real32 y) {
   return *((Real32*)&result);
 }
 
+static inline
+void Simd_create_v8i8() {
+  return;
+}
+
 #define RefW8_cas(r, x, y) __sync_val_compare_and_swap((Word8*)(r), (x), (y))
 #define RefW16_cas(r, x, y) __sync_val_compare_and_swap((Word16*)(r), (x), (y))
 #define RefW32_cas(r, x, y) __sync_val_compare_and_swap((Word32*)(r), (x), (y))
