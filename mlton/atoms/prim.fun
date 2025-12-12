@@ -149,7 +149,7 @@ datatype 'a t =
  | Ref_deref of {readBarrier: bool} (* to ssa2 *)
  | Ref_ref (* to ssa2 *)
  | String_toWord8Vector (* defunctorize *)
- | Simd_create_v8i8
+ | Simd_create_v8i8 (* codegen *)
  | Thread_atomicBegin (* to rssa *)
  | Thread_atomicEnd (* to rssa *)
  | Thread_atomicState (* to rssa *)
